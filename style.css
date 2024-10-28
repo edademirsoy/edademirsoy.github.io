@@ -1,31 +1,49 @@
-/* Genel Ayarlar */
+/* General Settings */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f4f4f9;
 }
 
-/* Header ve Logo Stili */
+/* Header and Logo Styling */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 .header .logo img {
-    width: 50px;
+    width: 60px;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     padding: 0;
+    margin-top: 10px;
 }
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffa500; /* Hover color change */
+}
+
+/* About Section */
 #about {
     padding: 40px;
     background-color: #f4f4f4;
@@ -45,44 +63,19 @@ header {
     line-height: 1.6;
 }
 
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #ffa500; /* Hover sırasında renk değişimi */
-}
-
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #ffa500; /* Hover sırasında renk değişimi */
-}
-
-/* Profil Bölümü */
+/* Profile Section */
 #profile {
     background-color: #f4f4f4;
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .profile-image {
-    width: 150px; /* Resim boyutu */
+    width: 150px;
     height: auto;
-    border-radius: 50%; /* Yuvarlak şekil */
-    margin-bottom: 20px; /* Alttan boşluk */
-    border: 4px solid #333; /* Resim etrafına çerçeve */
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #333;
 }
 
 .section_text_p1 {
@@ -103,29 +96,11 @@ header {
     color: #555;
     margin: 10px 0;
 }
-.logo img {
-    width: 60px; /* Logonun genişliğini ayarlayın */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Logoyu ortalar */
-}
-#profile {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.profile-image {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 4px solid #333;
-}
-
+/* Proficiencies Section */
 #proficiencies {
     padding: 50px 20px;
-    background-color: #f4f4f9; /* Light grey background */
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -133,12 +108,13 @@ header {
     font-size: 2.5em;
     color: #663300; /* Header color */
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .proficiencies-container {
     max-width: 800px;
     margin: 0 auto;
-    background: #fff; /* White background */
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow effect */
@@ -148,18 +124,18 @@ header {
 .proficiencies-container p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #333; /* Text color */
+    color: #333;
     margin-bottom: 20px;
 }
 
 .proficiencies-container p:last-child {
-    margin-bottom: 0; /* No margin after last paragraph */
+    margin-bottom: 0;
 }
 
-/* Projects Section Styling */
+/* Projects Section */
 #projects {
     padding: 50px 20px;
-    background-color: #f4f4f9; /* Light grey background */
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -167,6 +143,7 @@ header {
     font-size: 2.5em;
     color: #663300; /* Header color */
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .projects-container {
@@ -183,12 +160,18 @@ header {
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
     text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
 }
 
 .project h3 {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .project p {
@@ -212,4 +195,14 @@ header {
 
 .project a:hover {
     background-color: #4a2600; /* Darker shade on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .projects-container, .proficiencies-container {
+        padding: 20px;
+    }
+    .project {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
