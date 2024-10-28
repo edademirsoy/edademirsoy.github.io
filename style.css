@@ -26,6 +26,24 @@ header {
     gap: 20px;
     padding: 0;
 }
+#about {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.6;
+}
 
 .nav-links li a {
     color: #fff;
