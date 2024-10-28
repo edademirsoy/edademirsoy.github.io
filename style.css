@@ -44,3 +44,10 @@ header {
 }
 
 /* Diğer bölümler için özel stiller burada devam edebilir */
+.profile-image {
+    width: 150px; /* Resim boyutunu ayarlayın */
+    height: auto;
+    border-radius: 50%; /* Yuvarlak yapmak için */
+    margin-bottom: 20px; /* Alttan boşluk */
+}
+
