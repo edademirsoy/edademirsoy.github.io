@@ -1,66 +1,64 @@
 /* General Settings */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f9;
 }
 
-/* Header and Logo Styling */
+/* Header and Navigation */
 header {
     background-color: #333;
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.header .logo img {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
     width: 60px;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 25px;
-    padding: 0;
-    margin-top: 10px;
 }
 
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
     transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #ffa500; /* Hover color change */
+    color: #ffa500;
 }
 
-/* About Section */
-#about {
-    padding: 40px;
-    background-color: #f4f4f4;
-    text-align: center;
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-#about h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#about p {
-    font-size: 1.1em;
-    color: #666;
-    margin: 10px 0;
-    line-height: 1.6;
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    transition: 0.4s;
 }
 
 /* Profile Section */
@@ -78,131 +76,48 @@ header {
     border: 4px solid #333;
 }
 
-.section_text_p1 {
-    font-size: 1.2em;
-    color: #666;
-    margin: 10px 0;
-}
-
-.title_1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 5px 0;
-    color: #333;
-}
-
-.section_text_p2 {
-    font-size: 1.1em;
-    color: #555;
-    margin: 10px 0;
-}
-
-/* Proficiencies Section */
-#proficiencies {
+/* Sections Styling */
+#about, #proficiencies, #projects, #certificates {
     padding: 50px 20px;
-    background-color: #ffffff;
     text-align: center;
 }
 
-#proficiencies h2 {
-    font-size: 2.5em;
-    color: #663300; /* Header color */
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-.proficiencies-container {
+.proficiencies-container, .projects-container, .certificate {
     max-width: 800px;
     margin: 0 auto;
     background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-    text-align: left;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.proficiencies-container p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #333;
+.project, .certificate {
     margin-bottom: 20px;
-}
-
-.proficiencies-container p:last-child {
-    margin-bottom: 0;
-}
-
-/* Projects Section */
-#projects {
-    padding: 50px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-#projects h2 {
-    font-size: 2.5em;
-    color: #663300; /* Header color */
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project {
-    width: 300px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
-    text-align: left;
     transition: transform 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+.project:hover, .certificate:hover {
+    transform: translateY(-5px);
 }
 
-.project h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.project p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.project a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #663300;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.project a:hover {
-    background-color: #4a2600; /* Darker shade on hover */
-}
-
-/* Responsive Design for Smaller Screens */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .projects-container, .proficiencies-container {
-        padding: 20px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
     }
-    .project {
-        width: 100%; /* Full width on smaller screens */
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
     }
 }
