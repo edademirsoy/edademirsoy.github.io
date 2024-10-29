@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eda Demirsoy | Veri Analisti</title>
-    <link rel="stylesheet" href="style.css"> <!-- style.css dosyasına bağlantı -->
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./assets/pageicon.png" type="image/x-icon">
 </head>
 <body>
 <header>
     <nav id="nav">
-        
+        <div class="header">
+            <div class="logo">
+                <img src="./assets/pageicon.png" alt="Logo" class="logo-image">
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#proficiencies">Proficiencies</a></li>
@@ -19,6 +22,11 @@
                 <li><a href="#other-platforms">Other Platforms</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 </header>
@@ -31,101 +39,8 @@
             <p class="section_text_p2">Data Analyst</p>
         </div>
     </section>
-    <!-- Diğer bölümler buraya eklenir (Hakkımda, Uzmanlıklar, Projeler, Sertifikalar vb.) -->
+    <!-- Diğer bölümler buraya eklenir -->
 </main>
-<script src="app.js"></script> <!-- app.js dosyasına bağlantı -->
-</body>
-</html>
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        An experienced data analyst with a diverse background in business, finance, architecture, and technology. Proficient in tools such as Excel, SQL, Python, and Power BI, with expertise in optimizing business processes and enhancing decision-making through data analytics.
-    </p>
-    <p>
-        Leveraging strategic, data-driven insights gained from experience in SME consulting, financial analysis, and the architecture sector, effectively applies skills in insight generation, analytical thinking, and impactful reporting to drive performance improvements across various industries.
-    </p>
-</section>
-<section id="proficiencies">
-    <h2>Proficiencies: A Data Story</h2>
-    <div class="proficiencies-container">
-        <p>
-            With a strong foundation in Python and SQL, I navigate complex datasets with ease, uncovering actionable insights that drive impactful decision-making. My expertise in PostgreSQL empowers me to handle large databases, ensuring data integrity and enabling seamless analysis for business needs.
-        </p>
-        <p>
-            I leverage Power BI to create interactive dashboards and reports that bring data to life, enabling stakeholders to grasp complex information at a glance. My skills in data visualization allow me to transform raw data into clear, engaging visuals that tell a story, guiding business strategies and enhancing understanding across teams.
-        </p>
-        <p>
-            I am proficient in Pandas and NumPy, which are my go-to libraries for data manipulation and analysis. Using these tools, I can clean, preprocess, and organize data, ensuring its accuracy and reliability. Matplotlib and Seaborn are essential in my toolkit for building insightful graphs and charts that make data accessible and engaging.
-        </p>
-        <p>
-            Beyond technical skills, my experience with data modeling, data cleaning, and analytics enables me to prepare data that's ready for deep dives and predictive modeling. I’m skilled at identifying patterns, recognizing trends, and spotting anomalies that can reveal significant business opportunities.
-        </p>
-        <p>
-            In addition to data-centric skills, I bring strengths in project management, communication, and leadership. I excel at coordinating cross-functional teams, translating data insights into clear business narratives, and ensuring projects stay on track and deliver results. My dedication to time management allows me to juggle multiple tasks effectively, ensuring that no detail is overlooked.
-        </p>
-        <p>
-            Together, these skills allow me to turn data into a powerful narrative, helping organizations understand their past, anticipate future trends, and make informed decisions that drive success.
-        </p>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <!-- Project 1 -->
-        <div class="project">
-            <h3>E-Commerce Data Analysis and RFM Modeling with SQL</h3>
-            <p><strong>Business Objective:</strong> Analyzing e-commerce data from a Brazilian company, Olíste, to extract insights from over 100,000 orders and segment 4,000 customers with RFM analysis to improve marketing strategies.</p>
-            <p><strong>Tools Used:</strong> PostgreSQL, SQL</p>
-            <a href="https://github.com/edademirsoy/ecommerce_rfm" target="_blank">View on GitHub</a>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project">
-            <h3>Hotel Booking Data Analysis and Visualization with Power BI</h3>
-            <p><strong>Business Objective:</strong> Addressing high cancellation rates and optimizing revenue by analyzing booking patterns, with insights on customer behavior that improve customer retention.</p>
-            <p><strong>Tools Used:</strong> Power BI</p>
-            <a href="https://github.com/edademirsoy/hotel_booking_analysis" target="_blank">View on GitHub</a>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project">
-            <h3>Business Operations Analysis with Python, SQL, Power BI</h3>
-            <p><strong>Business Objective:</strong> Using the Northwind Traders dataset to analyze business operations, sales performance, and customer behavior, supporting strategic decision-making and operational improvements.</p>
-            <p><strong>Tools Used:</strong> Python, SQL, Power BI</p>
-            <a href="https://github.com/edademirsoy/northwind_analysis" target="_blank">View on GitHub</a>
-        </div>
-        
-        <!-- Project 4 -->
-        <div class="project">
-            <h3>Nobel Prize Data Analysis with Python</h3>
-            <p><strong>Business Objective:</strong> Analyzing Nobel Prize data to understand the demographics, award distributions, and trends influencing achievements in various categories.</p>
-            <p><strong>Tools Used:</strong> Python, Pandas, Matplotlib</p>
-            <a href="https://github.com/edademirsoy/nobel_prize_analysis" target="_blank">View on GitHub</a>
-        </div>
-    </div>
-</section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates | Eda Demirsoy</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
-</head>
-<body>
-    <header>
-        <h1>Certificates</h1>
-    </header>
-    <main>
-        <section id="certificates">
-            <div class="certificate">
-                <img src="./assets/fundamentals_of_data_analytics.png" alt="Fundamentals of Data Analytics Certificate" class="certificate-image">
-                <h2>Data Analyst Bootcamp Certificate</h2>
-                <p><strong>Kodlasam, May 2024</strong></p>
-                <p>This 12-month training covers the fundamentals of data analytics, including data analysis, querying, visualization, and reporting with tools like Excel, Python, SQL, and Power BI. Throughout the training, practical applications in areas such as e-commerce were conducted, and the program was successfully completed with a final project to earn this certificate.</p>
-            </div>
-        </section>
-    </main>
+<script src="app.js"></script>
 </body>
 </html>
